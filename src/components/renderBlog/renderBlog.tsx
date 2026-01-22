@@ -155,9 +155,10 @@ const RenderBlog: NextPage<Props> = ({
 											className="flex items-start space-x-3 group cursor-pointer"
 										>
 											<div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
-											<p className="text-sm text-gray-600 group-hover:text-blue-600 transition-colors leading-relaxed">
-												{item.title}
-											</p>
+											<p
+												className="text-sm text-gray-600 group-hover:text-blue-600 transition-colors leading-relaxed"
+												dangerouslySetInnerHTML={{ __html: item.title }}
+											/>
 										</div>
 									))}
 								</div>
