@@ -86,9 +86,10 @@ const RenderBlog: NextPage<Props> = ({
 														{removeAsterisks(title)}
 													</h3>
 
-													<p className="text-gray-600 text-sm mb-3 leading-relaxed">
-														{summary[index]}
-													</p>
+													<p
+														className="text-gray-600 text-sm mb-3 leading-relaxed"
+														dangerouslySetInnerHTML={{ __html: summary[index] }}
+													/>
 
 													<div className="flex items-center justify-between">
 														<Link
