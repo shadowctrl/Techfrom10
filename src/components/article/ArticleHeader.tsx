@@ -24,7 +24,10 @@ export default function ArticleHeader({
 						<h1 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
 							{removeAsterisks(headline)}
 						</h1>
-						<p className="text-lg text-gray-600 leading-relaxed">{summary}</p>
+						<p
+							className="text-lg text-gray-600 leading-relaxed"
+							dangerouslySetInnerHTML={{ __html: summary }}
+						/>
 					</div>
 
 					<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-8 pt-6 border-t border-gray-100">
